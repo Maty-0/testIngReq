@@ -30,3 +30,6 @@ Archivo fuente: [`./diagramas/as-is.bpmn`](./diagramas/as-is.bpmn)
 - **Falta de visibilidad curricular global (Estudiante):** La malla actual solo muestra las relaciones en un orden de magnitud (nodo anterior y siguiente), impidiendo que el estudiante evalúe el impacto real de desaprobar o postergar un ramo en el tiempo mínimo de titulación.
 - **Información opaca e informal sobre la carga docente (Estudiante):** Inexistencia de un canal institucional o repositorio centralizado donde se valore la dificultad real y la percepción docente, forzando la toma de decisiones basada en rumores de pasillo.
 - **Ineficiencia en tiempos de preparación:** El estudiante invierte largas jornadas semanales en armar combinaciones de horario de forma iterativa y manual.
+
+![Proceso AS-IS](./diagramas/as-is.png)
+Archivo fuente: [`./diagramas/as-is.bpmn`](./diagramas/as-is.bpmn)
