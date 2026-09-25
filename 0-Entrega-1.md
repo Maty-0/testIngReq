@@ -1,9 +1,13 @@
 # Ingeniería de Requisitos — Entrega 1
 
 ## Equipo
-- Integrante 1
-- Integrante 2
-- Integrante 3
+- Ignacio Geldes
+- Percival Leiva
+- Patricio Rivadeneira
+- Raúl Arteaga
+- Matías Abarca
+
+
 
 ## Proyecto
 **Sistema de Gestión Académica e Inscripción Interactiva (SGAI)**
