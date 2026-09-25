@@ -1,32 +1,38 @@
 # Historias de usuario
 
-## HU-01: Planificación mediante Horario Interactivo
-Como **estudiante**, quiero **armar una simulación de mi horario semestral en una grilla interactiva visualizando directamente asignaturas, secciones y horas**, para **evaluar de forma clara mi carga académica sin recurrir a cálculos manuales**.
-**Actividad TO-BE asociada:** Simular horario y revisar métricas de dificultad
-**Criterios de aceptación:**
-- CA1: El sistema permite agregar y quitar secciones de la grilla mediante selección visual o drag-and-drop.
-- CA2: El total de créditos se recalcula automáticamente cada vez que se modifica una sección en el horario.
-- CA3: El sistema bloquea de inmediato la adición de una sección si esta genera un choque de horario con otra previamente agregada.
+## HU-01: Planificador e Historial en Grilla Interactiva
+Como **estudiante**, quiero **simular combinaciones de horarios en una grilla interactiva semanal**, para **visualizar de forma clara mi carga académica y evitar choques de horario o sobrecarga de créditos**.
+- **Actividad TO-BE asociada:** Simular horario y revisar métricas de dificultad
+- **Criterios de aceptación:**
+  - **CA1:** El sistema permite agregar y remover secciones de la grilla horaria mediante interacción visual (clic o drag-and-drop).
+  - **CA2:** El contador de créditos totales se actualiza dinámicamente cada vez que se modifica una sección dentro de la simulación.
+  - **CA3:** El sistema bloquea de inmediato la adición de una sección si esta genera un choque de horario o supera el tope crediticio permitido.
 
-## HU-02: Visualización de Referencias Docentes y Dificultad
-Como **estudiante**, quiero **ver la puntuación promedio de dificultad de una materia y la valoración asignada a sus docentes**, para **tomar decisiones informadas al elegir en qué sección inscribirme**.
-**Actividad TO-BE asociada:** Simular horario y revisar métricas de dificultad
-**Criterios de aceptación:**
-- CA1: Cada sección dentro del planificador muestra una calificación con estrellas (1 a 5) del profesor y un indicador del nivel de dificultad.
-- CA2: Las puntuaciones se calculan dinámicamente según el promedio de evaluaciones registradas por alumnos en semestres anteriores.
-- CA3: La interfaz no expone en ningún apartado la identidad ni los datos personales de los estudiantes que emitieron la valoración.
+## HU-02: Consulta de Referencias y Dificultad Docente
+Como **estudiante**, quiero **ver las calificaciones de profesores y el nivel de dificultad asignado por la comunidad a cada materia**, para **tomar decisiones informadas al momento de estructurar mi horario semestral**.
+- **Actividad TO-BE asociada:** Simular horario y revisar métricas de dificultad
+- **Criterios de aceptación:**
+  - **CA1:** Cada sección despliega una valoración con estrellas (1 a 5) del docente y un indicador de exigencia/dificultad de la asignatura.
+  - **CA2:** Las puntuaciones mostradas corresponden al promedio actualizado de las opiniones registradas por estudiantes en semestres anteriores.
+  - **CA3:** La interfaz no expone en ningún apartado la identidad ni los datos personales de los estudiantes que emitieron las valoraciones.
 
-## HU-03: Malla Interactiva de Cadena Crítica
-Como **estudiante**, quiero **seleccionar una asignatura en la malla interactiva y ver destacadas todas las materias vinculadas en la cadena de prerequisitos e imprevistos**, para **entender el impacto curricular global de mis cursos**.
-**Actividad TO-BE asociada:** Consultar malla interactiva de cadena crítica
-**Criterios de aceptación:**
-- CA1: Al hacer clic en una asignatura, la malla resalta gráficamente todos sus prerequisitos (pasados) y todas las asignaturas que dependen directamente de ella (futuras).
-- CA2: El sistema utiliza un código de colores diferenciado para distinguir asignaturas aprobadas, pendientes y bloqueadas.
+## HU-03: Visualización Graph-based de Cadena Crítica Curricular
+Como **estudiante**, quiero **seleccionar una asignatura en la malla interactiva y desplegar toda su cadena de prerrequisitos e imprevistos**, para **comprender el impacto curricular completo de aprobar o reprobar un curso**.
+- **Actividad TO-BE asociada:** Consultar malla interactiva y tiempo restante
+- **Criterios de aceptación:**
+  - **CA1:** Al seleccionar un ramo, la malla resalta gráficamente la red completa de prerrequisitos hacia atrás y asignaturas dependientes hacia adelante.
+  - **CA2:** El grafo aplica un código de colores estándar para distinguir materias aprobadas, inscritas, disponibles y bloqueadas.
 
-## HU-04: Estimación del Tiempo Restante de Carrera
-Como **estudiante**, quiero **visualizar la cantidad mínima estimada de semestres que me restan para titularme**, para **planificar estratégicamente mi avance académico a largo plazo**.
-**Actividad TO-BE asociada:** Consultar malla interactiva de cadena crítica
-**Criterios de aceptación:**
-- CA1: El sistema analiza los ramos aprobados y calcula la ruta crítica óptima de prerrequisitos pendientes.
-- CA2: Se despliega en pantalla un indicador con el número mínimo de semestres requeridos para egresar.
-- CA3: Si el estudiante simula reprobar o postergar una asignatura, el contador de semestres estimados se actualiza instantáneamente reflejando el potencial retraso.
+## HU-04: Calculadora de Tiempo Estimado para la Titulación
+Como **estudiante**, quiero **conocer la cantidad mínima estimada de semestres restantes para terminar mi carrera**, para **planificar estratégicamente mi avance académico a mediano y largo plazo**.
+- **Actividad TO-BE asociada:** Consultar malla interactiva y tiempo restante
+- **Criterios de aceptación:**
+  - **CA1:** El sistema analiza el historial académico aprobado y calcula la ruta crítica mínima de semestres necesarios para egresar.
+  - **CA2:** Si el usuario simula la desaprobación o postergación de un ramo en la malla, el indicador recalculado refleja el potencial retraso en semestres.
+
+## HU-05: Confirmación e Inscripción Directa de Horario
+Como **estudiante**, quiero **enviar directamente la simulación de horario previamente diseñada para mi inscripción oficial**, para **asegurar mis cupos en un solo clic sin reingresar datos**.
+- **Actividad TO-BE asociada:** Confirmar e inscribir horario simulado
+- **Criterios de aceptación:**
+  - **CA1:** La interfaz dispone de un botón de confirmación directa activo durante la apertura del periodo oficial de inscripciones.
+  - **CA2:** Al confirmar, el sistema registra la selección, actualiza la disponibilidad de cupos en tiempo real y emite un comprobante digital de inscripción.

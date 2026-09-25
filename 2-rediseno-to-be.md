@@ -1,48 +1,42 @@
 # Análisis de rediseño y propuesta TO-BE
 
 ## Mejoras identificadas por participante
+
 | Participante | Objetivo | Problema | Mejora deseada |
 |----------------|----------|----------|-----------------|
-| Dirección Docente | Difundir la oferta académica eficientemente. | La publicación mediante Excel desarticulado exige procesamiento manual del alumno y genera consultas posteriores por errores. | Integrar la oferta académica directamente en una base de datos centralizada consumible de forma dinámica por la plataforma. |
-| Estudiante | Planificar un horario funcional y tomar decisiones académicas informadas. | Proceso manual propenso a choques de horario, cálculo de créditos erróneo, malla estática limitada y falta de referencias docentes. | Planificador interactivo de horario, estimación de tiempo real de carrera, visualización completa de la red de prerequisitos/correquisitos y puntuación comunitaria de dificultad/docentes. |
+| Dirección Docente | Difundir la oferta académica semestral eficientemente. | La publicación mediante archivos Excel estáticos obliga al procesamiento manual y genera errores de consulta. | Cargar la oferta directamente en el sistema centralizado para ser consumida de forma dinámica. |
+| Estudiante | Planificar un horario semestral válido y tomar decisiones informadas. | Proceso manual propenso a topes de hora/créditos, malla estática limitada a 1er grado y falta de datos de profesores/dificultad. | Simulador interactivo de horarios, malla multinivel con cadena crítica, tiempo estimado de egreso y métricas de dificultad docente. |
 
 ## Iniciativas de rediseño
 
-### Iniciativa 1: Automatización e Integración de Oferta Académica (SGAI)
-- **Actividad(es) del AS-IS que afecta:** Publicar archivo Excel con oferta académica / Descargar oferta en Excel.
-- **Heurística aplicada:** *Task Automation* (Automatización de tareas) & *Integral Technology* (Tecnología Integral).
-- **Objetivo o mejora que resuelve:** Cargar la oferta académica directamente en la base de datos del sistema, eliminando la generación e intercambio de archivos Excel independientes.
-- **Efecto esperado:** Reducción drástica del tiempo de preparación, eliminación del procesamiento manual por parte del estudiante y disponibilidad inmediata de la oferta actualizada en tiempo real.
+### Iniciativa 1: Sincronización Automática de Oferta Académica
+- **Actividad(es) del AS-IS que afecta:** Publica Excel de propuesta académica / Revisa la propuesta académica.
+- **Heurística aplicada:** *Task Automation* & *Integral Technology*.
+- **Objetivo o mejora que resuelve:** Reemplazar el archivo estático Excel por la sincronización directa en la base de datos del sistema universitario.
+- **Efecto esperado:** Eliminación del procesamiento manual de archivos por parte del alumno y disponibilidad inmediata de la oferta actualizada en tiempo real.
 
-### Iniciativa 2: Diseñador y Simulador Interactivo de Horarios con Puntuación Docente
-- **Actividad(es) del AS-IS que afecta:** Buscar referencias de docentes y materias / Calcular créditos y detectar choques de horario.
-- **Heurística aplicada:** *Task Composition* (Composición de tareas) & *Empower* (Empoderamiento al usuario).
-- **Objetivo o mejora que resuelve:** Consolidar en una única interfaz interactiva la construcción de horario por drag-and-drop, la validación automática de choques horarios y créditos, y el despliegue de métricas comunitarias de dificultad y calificaciones de profesores.
-- **Efecto esperado:** Aumento exponencial en la calidad de la planificación, cero choques de horario inadvertidos y toma de decisiones fundamentada en retroalimentación objetiva de la comunidad estudiantil.
+### Iniciativa 2: Diseñador Interactivo de Horarios y Evaluación Docente
+- **Actividad(es) del AS-IS que afecta:** Busca referencias de las asignaturas / Crea un horario en base a las asignaturas que puede cursar.
+- **Heurística aplicada:** *Task Composition* & *Empower*.
+- **Objetivo o mejora que resuelve:** Unificar en una sola interfaz interactiva la selección visual de secciones, la comprobación de dificultad/profesores y la validación inmediata de choques horarias y créditos.
+- **Efecto esperado:** Reducción a cero de errores de sobrecarga o topes horarios, optimizando el tiempo de planificación del estudiante.
 
-### Iniciativa 3: Malla Interactiva Multinivel y Calculadora de Tiempo Real de Carrera
-- **Actividad(es) del AS-IS que afecta:** Revisar malla curricular estática.
-- **Heurística aplicada:** *Control Relocation* / *Informational Integration* (Aumento de visibilidad de datos).
-- **Objetivo o mejora que resuelve:** Reemplazar el gráfico estático por un grafo multinivel que resalte toda la cadena crítica de asignaturas (dependencias previas y posteriores) y calcule automáticamente la duración mínima estimada para finalizar la carrera (semestres restantes).
-- **Efecto esperado:** Incremento sustancial en la flexibilidad y planificación académica del estudiante a mediano y largo plazo.
+### Iniciativa 3: Malla Interactiva de Cadena Crítica y Calculadora de Tiempo de Egreso
+- **Actividad(es) del AS-IS que afecta:** Revisa su avance curricular.
+- **Heurística aplicada:** *Control Relocation* / *Informational Integration*.
+- **Objetivo o mejora que resuelve:** Evolucionar la malla estática de 1er grado a un grafo dinámico que despliegue todos los prerrequisitos/correquisitos en cadena y estime el tiempo mínimo real restante de carrera.
+- **Efecto esperado:** Mayor visibilidad estratégica para la toma de decisiones sobre qué ramos priorizar o botar semestralmente.
 
 ## Diagrama TO-BE
 ![Proceso TO-BE](./diagramas/to-be.png)
 Archivo fuente: [`./diagramas/to-be.bpmn`](./diagramas/to-be.bpmn)
 
-### Descripción de Tareas en el Modelo TO-BE
-- **Sincronizar y publicar oferta académica** (*Service Task*): El sistema carga y valida automáticamente la base de datos de asignaturas, cupos, secciones y horarios para el periodo correspondiente.
-- **Consultar malla interactiva de cadena crítica** (*User Task*): El estudiante selecciona asignaturas en el grafo dinámico, proyectando la ruta curricular completa y calculando el estimado de tiempo mínimo restante para la titulación.
-- **Simular horario y revisar métricas de dificultad** (*User Task*): El estudiante arrastra secciones a una grilla semanal interactiva; el sistema muestra calificaciones estudiantiles de profesores y dificultad percibida.
-- **Validar automáticamente tope de horarios y créditos** (*Service Task*): El sistema evalúa en tiempo real que la combinación simulada no contenga cruces horarias ni exceda los límites de créditos permitidos.
-- **Confirmar e inscribir horario predeterminado** (*User Task*): El estudiante envía la combinación óptima verificada con un único clic al abrirse el proceso oficial.
-- **Registrar inscripción y actualizar vacantes** (*Service Task*): El sistema efectúa el registro, confirma la carga académica y actualiza los cupos disponibles de forma inmediata.
-
 ## Actividades que cambian del AS-IS al TO-BE
+
 | Actividad en el AS-IS | Actividad en el TO-BE | Qué cambia |
 |-------------------------|--------------------------|------------|
-| Publicar archivo Excel con oferta académica / Descargar oferta en Excel | Sincronizar y publicar oferta académica | Se elimina el archivo Excel estático; el sistema procesa y publica la oferta en la base de datos centralizada. |
-| Revisar malla curricular estática | Consultar malla interactiva de cadena crítica | Pasa de mostrar dependencias de 1er grado a desplegar toda la red de prerequisitos/correquisitos y estimar los semestres mínimos restantes. |
-| Buscar referencias de docentes y materias | Simular horario y revisar métricas de dificultad | La información de docentes y grado de dificultad se integra directamente dentro del simulador desde valoraciones estudiantiles. |
-| Calcular créditos y detectar choques de horario | Validar automáticamente tope de horarios y créditos | La validación matemática de créditos y traslapes horarias la realiza el sistema en tiempo real, bloqueando selecciones inválidas. |
-| Ingresar asignaturas en sistema web | Confirmar e inscribir horario predeterminado | Se reemplaza la digitación individual y manual por la confirmación directa de un diseño simulado previo. |
+| Publica Excel de propuesta académica | Sincronizar y publicar oferta en BD | Pasa de la carga estática de una planilla Excel al procesamiento automático de la oferta en la base de datos del sistema. |
+| Revisa su avance curricular | Consultar malla interactiva y tiempo restante | Pasa de un gráfico estático de 1er grado a un grafo multinivel con cálculo dinámico de semestres restantes para la titulación. |
+| Busca referencias de las asignaturas | Simular horario y revisar métricas de dificultad | La búsqueda informal externa se reemplaza por métricas de dificultad y desempeño docente integradas en el simulador. |
+| Crea un horario en base a las asignaturas que puede cursar | Validar automáticamente topes y créditos en simulador | El cálculo manual en papel/Excel es sustituido por una grilla interactiva que detecta e impide cruces horarias y excesos en tiempo real. |
+| Guarda su horario | Confirmar e inscribir horario simulado | La digitación o inscripción manual se simplifica al envío directo del diseño simulado previamente guardado. |
