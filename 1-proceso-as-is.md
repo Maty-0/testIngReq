@@ -31,5 +31,3 @@ Archivo fuente: [`./diagramas/as-is.bpmn`](./diagramas/as-is.bpmn)
 - **Información opaca e informal sobre la carga docente (Estudiante):** Inexistencia de un canal institucional o repositorio centralizado donde se valore la dificultad real y la percepción docente, forzando la toma de decisiones basada en rumores de pasillo.
 - **Ineficiencia en tiempos de preparación:** El estudiante invierte largas jornadas semanales en armar combinaciones de horario de forma iterativa y manual.
 
-![Proceso AS-IS](./diagramas/as-is.png)
-Archivo fuente: [`./diagramas/as-is.bpmn`](./diagramas/as-is.bpmn)
