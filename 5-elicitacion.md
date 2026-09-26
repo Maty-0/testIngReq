@@ -2,8 +2,9 @@
 
 ## Técnica 1: Entrevista semiestructurada
 - **Participante(s):** Estudiantes representantes de carrera y alumnos de últimos semestres.
-- **Fecha y modalidad:** 15 de Septiembre de 2026, modalidad virtual (vía Google Meet).
-- **Evidencia:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion.png)
+- **Fecha y modalidad:** 15 de Septiembre de 2026, modalidad virtual (vía Discord).
+- **Evidencia1:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion1.png)
+- **Evidencia2:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion2.png)
 - **Hallazgos principales:**
   - Se confirmó que la universidad publica semestralmente archivos Excel con formatos heterogéneos y cambios frecuentes en las cabeceras de columnas.
   - Al no contar con apoyo institucional ni API oficial, los estudiantes manifestaron la necesidad de una herramienta independiente donde ellos mismos puedan cargar el Excel del semestre y traducirlo para toda la comunidad.
@@ -11,7 +12,7 @@
 
 ## Técnica 2: Grupo Focal (Focus Group)
 - **Participante(s):** Grupo de 8 estudiantes de diversos niveles académicos (1er a 5to año).
-- **Fecha y modalidad:** 18 de Septiembre de 2026, modalidad presencial en laboratorio de computación.
+- **Fecha y modalidad:** 22 de Septiembre de 2026, modalidad virtual (vía Discord).
 - **Evidencia:** [Fotografía de la sesión de grupo focal](./evidencia/focus-group.jpg)
 - **Hallazgos principales:**
   - El 100% de los participantes respaldó la idea de una solución independiente y comunitaria ("hecha por y para estudiantes").
