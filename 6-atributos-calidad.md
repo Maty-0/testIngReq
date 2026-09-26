@@ -1,9 +1,9 @@
 # Atributos de calidad (ISO 25010)
 
 ## Priorización de los 9 atributos de primer nivel
-1. **Usabilidad (Usability):** Prioridad crítica para que la carga/traducción del Excel, la grilla interactiva y la malla gráfica sean intuitivas sin requerir manuales.
+1. **Usabilidad (Usability):** Prioridad crítica para que la carga/traducción del Excel, la grilla interactiva y la malla gráfica sean intuitivas sin requerir capacitación.
 2. **Mantenibilidad / Tolerancia a Variabilidad (Maintainability):** Crucial para que el algoritmo procesador de Excel pueda adaptarse fácilmente a cambios en el formato o nombres de columnas que la universidad introduzca en futuros semestres.
-3. **Eficiencia de desempeño (Performance Efficiency):** Vital para mantener tiempos de respuesta inmediatos ante interacciones en el simulador y procesar el archivo Excel rápidamente en el navegador o servidor.
+3. **Eficiencia de desempeño (Performance Efficiency):** Vital para mantener tiempos de respuesta inmediatos ante interacciones en el simulador y procesar el archivo Excel rápidamente en el navegador o servidor comunitario.
 4. **Fiabilidad (Reliability):** Garantizar que el parseo de datos no pierda secciones ni corrompa los módulos horarios de la oferta traducida.
 5. **Seguridad / Privacidad (Security):** Garantizar el anonimato estricto en el módulo de opiniones docentes y la protección de datos personales.
 6. **Compatibilidad (Compatibility):** Operar adecuadamente en navegadores web de escritorio y dispositivos móviles.

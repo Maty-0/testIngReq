@@ -2,7 +2,7 @@
 
 ## HU-01: Carga y Traducción de Oferta Académica en Excel
 Como **estudiante o administrador comunitario**, quiero **subir la planilla Excel publicada por la universidad y validar el mapeo de sus datos**, para **convertir la oferta académica estática en un formato estructurado consumible por la página**.
-- **Actividad TO-BE asociada:** Cargar y traducir Excel de oferta a formato unificado
+- **Actividad TO-BE asociada:** Sincronizar y publicar oferta y referencias en el sistema
 - **Criterios de aceptación:**
   - **CA1:** El sistema permite arrastrar o seleccionar un archivo `.xlsx` o `.csv`.
   - **CA2:** El procesador interpreta los bloques de horario, nombres de asignaturas, códigos, secciones y docentes.
