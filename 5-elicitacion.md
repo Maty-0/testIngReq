@@ -3,8 +3,8 @@
 ## Técnica 1: Entrevista semiestructurada
 - **Participante(s):** Estudiantes representantes de carrera y alumnos de últimos semestres.
 - **Fecha y modalidad:** 15 de Septiembre de 2026, modalidad virtual (vía Discord).
-- **Evidencia1:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion1.png)
-- **Evidencia2:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion2.png)
+- **Evidencia1:** ![Captura de pantalla de la primera reunión en línea](./evidencia/entrevista-sesion1.png)
+- **Evidencia2:** ![Captura de pantalla de la segunda reunión en línea](./evidencia/entrevista-sesion2.png)
 - **Hallazgos principales:**
   - Se confirmó que la universidad publica semestralmente archivos Excel con formatos heterogéneos y cambios frecuentes en las cabeceras de columnas.
   - Al no contar con apoyo institucional ni API oficial, los estudiantes manifestaron la necesidad de una herramienta independiente donde ellos mismos puedan cargar el Excel del semestre y traducirlo para toda la comunidad.
