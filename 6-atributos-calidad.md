@@ -1,26 +1,26 @@
 # Atributos de calidad (ISO 25010)
 
 ## Priorización de los 9 atributos de primer nivel
-1. **Usabilidad (Usability):** Prioridad crítica para garantizar que la grilla interactiva, el simulador de horarios y el grafo de la malla curricular sean intuitivos y utilizables sin capacitación previa.
-2. **Eficiencia de desempeño (Performance Efficiency):** Vital para mantener tiempos de respuesta inmediatos ante interacciones drag-and-drop y cambios en el simulador, soportando además picos de concurrencia.
-3. **Fiabilidad (Reliability):** Indispensable para evitar caídas del servicio o pérdida de planificaciones guardadas durante los períodos con mayor volumen de accesos.
-4. **Seguridad (Security):** Necesaria para resguardar los datos del estudiante y garantizar el anonimato estricto de las valoraciones de docentes y asignaturas.
-5. **Mantenibilidad (Maintainability):** Requerida para modificar reglas académicas o la oferta curricular semestral sin reescribir componentes core del sistema.
-6. **Compatibilidad (Compatibility):** Deseable para operar sin contratiempos en los principales navegadores web (Chrome, Firefox, Safari, Edge) y dispositivos.
-7. **Flexibilidad (Flexibility / Adaptability):** Importante para responder a cambios en los reglamentos universitarios o variaciones de cupos.
-8. **Portabilidad (Portability):** Permite el despliegue del sistema en infraestructuras locales institucionales o servicios en la nube.
-9. **Adecuación funcional (Functional Suitability):** Asegura el cumplimiento estricto del 100% de las reglas de inscripción y prerrequisitos.
+1. **Usabilidad (Usability):** Prioridad crítica para que la carga/traducción del Excel, la grilla interactiva y la malla gráfica sean intuitivas sin requerir manuales.
+2. **Mantenibilidad / Tolerancia a Variabilidad (Maintainability):** Crucial para que el algoritmo procesador de Excel pueda adaptarse fácilmente a cambios en el formato o nombres de columnas que la universidad introduzca en futuros semestres.
+3. **Eficiencia de desempeño (Performance Efficiency):** Vital para mantener tiempos de respuesta inmediatos ante interacciones en el simulador y procesar el archivo Excel rápidamente en el navegador o servidor.
+4. **Fiabilidad (Reliability):** Garantizar que el parseo de datos no pierda secciones ni corrompa los módulos horarios de la oferta traducida.
+5. **Seguridad / Privacidad (Security):** Garantizar el anonimato estricto en el módulo de opiniones docentes y la protección de datos personales.
+6. **Compatibilidad (Compatibility):** Operar adecuadamente en navegadores web de escritorio y dispositivos móviles.
+7. **Flexibilidad (Flexibility):** Permitir la persistencia local de datos (*LocalStorage/IndexedDB*) para uso individual privado o sincronización comunitaria.
+8. **Portabilidad (Portability):** Posibilidad de desplegar la plataforma independiente en servicios en la nube de acceso público.
+9. **Adecuación funcional (Functional Suitability):** Cumplimiento estricto de las reglas lógicas de cálculo de créditos y detección de topes horarios.
 
 ## Métricas de los 3 atributos más importantes
 
 ### Usabilidad (Usability)
-- **Métrica:** *Tiempo de finalización de la simulación de horario en el primer intento.*
-- **Descripción:** Se medirá el tiempo transcurrido desde que un estudiante ingresa al simulador hasta que construye un horario válido sin topes ni sobrecarga de créditos. El objetivo de calidad establece que al menos el **85% de los usuarios evaluados debe completar la simulación en menos de 3 minutos** en su primera interacción sin requerir asistencia.
+- **Métrica:** *Tiempo de traducción y configuración de oferta desde Excel.*
+- **Descripción:** Se medirá el tiempo transcurrido desde que el usuario sube el archivo Excel hasta que visualiza la oferta cargada en el simulador. El objetivo establece que el **90% de los usuarios logre importar y validar la oferta en menos de 2 minutos** en su primer intento.
+
+### Mantenibilidad / Tolerancia a Variabilidad (Maintainability)
+- **Métrica:** *Tasa de éxito en la traducción de archivos Excel con esquemas heterogéneos.*
+- **Descripción:** El módulo de mapeo y parseo debe interpretar correctamente al menos el **95% de los registros de asignaturas y módulos horarios** de planillas Excel de distintos semestres sin requerir modificaciones en el código fuente.
 
 ### Eficiencia de desempeño (Performance Efficiency)
-- **Métrica:** *Latencia de renderizado y recalculo en la grilla interactiva.*
-- **Descripción:** Al agregar, arrastrar o remover una sección en la grilla del simulador, el tiempo de actualización visual del horario y el cálculo dinámico de créditos **no debe superar los 500 milisegundos (ms)** bajo condiciones de carga normal.
-
-### Fiabilidad (Reliability)
-- **Métrica:** *Disponibilidad del sistema (Uptime) en período de preinscripción e inscripción.*
-- **Descripción:** La plataforma debe garantizar una **disponibilidad del 99.9%** durante la semana previa y el día oficial del proceso de inscripción, manteniendo la capacidad de atender solicitudes concurrentes de hasta **5.000 estudiantes simultáneos** sin degradación del servicio ni caídas del sistema.
+- **Métrica:** *Tiempo de renderizado y recalculo en la grilla interactiva.*
+- **Descripción:** Al interactuar con el simulador (agregar/quitar secciones extraídas del Excel), el tiempo de actualización visual del horario y el cálculo de créditos **no debe superar los 500 milisegundos**.

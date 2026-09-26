@@ -1,25 +1,25 @@
 # Elicitación de requisitos
 
 ## Técnica 1: Entrevista semiestructurada
-- **Participante(s):** Coordinador de la Dirección Docente y Estudiantes representantes de carrera.
+- **Participante(s):** Estudiantes representantes de carrera y alumnos de últimos semestres.
 - **Fecha y modalidad:** 15 de Septiembre de 2026, modalidad virtual (vía Google Meet).
 - **Evidencia:** [Captura de pantalla de la reunión en línea](./evidencia/entrevista-sesion.png)
 - **Hallazgos principales:**
-  - Se confirmó que la publicación estática en archivos Excel genera una alta saturación de consultas por choques horarios y errores de cuenta de créditos no detectados a tiempo por los alumnos.
-  - La administración académica aprueba la sincronización directa de la oferta en la base de datos para eliminar la distribución de planillas manuales.
-  - Los estudiantes expresaron frustración con la plataforma actual porque la malla interactiva solo muestra dependencias de 1er grado, impidiendo ver si reprobar un ramo bloquea 1 o 3 asignaturas más adelante en la carrera.
+  - Se confirmó que la universidad publica semestralmente archivos Excel con formatos heterogéneos y cambios frecuentes en las cabeceras de columnas.
+  - Al no contar con apoyo institucional ni API oficial, los estudiantes manifestaron la necesidad de una herramienta independiente donde ellos mismos puedan cargar el Excel del semestre y traducirlo para toda la comunidad.
+  - Existe frustración con la plataforma oficial porque la malla solo muestra dependencias directas de 1er grado, impidiendo planificar a mediano plazo.
 
 ## Técnica 2: Grupo Focal (Focus Group)
-- **Participante(s):** Grupo de 8 estudiantes de diversos niveles académicos (de 1er a 5to año).
+- **Participante(s):** Grupo de 8 estudiantes de diversos niveles académicos (1er a 5to año).
 - **Fecha y modalidad:** 18 de Septiembre de 2026, modalidad presencial en laboratorio de computación.
 - **Evidencia:** [Fotografía de la sesión de grupo focal](./evidencia/focus-group.jpg)
 - **Hallazgos principales:**
-  - El 100% de los participantes consideró prioritario contar con un simulador en grilla semanal interactiva antes que una lista de textos con horas.
-  - La métrica de "tiempo real para egresar" (semestres mínimos restantes) fue calificada como una función clave para planificar estratégicamente el avance curricular.
-  - Los estudiantes exigieron un mecanismo estricto de anonimato para calificar a los profesores y evaluar la dificultad de las asignaturas, señalando que de lo contrario no participarían por miedo a represalias.
+  - El 100% de los participantes respaldó la idea de una solución independiente y comunitaria ("hecha por y para estudiantes").
+  - La función de cargar el Excel y obtener automáticamente la oferta en una grilla visual fue considerada la innovación más crítica para ahorrar horas de trabajo manual.
+  - Se exigió anonimato estricto para calificar a los profesores, destacando que en una plataforma independiente esto genera mayor confianza.
 
 ## Acta de acuerdo
-En reunión de validación celebrada entre el equipo del proyecto, representantes de los estudiantes y la Dirección Docente, se alcanzaron los siguientes acuerdos formales:
-1. Priorizar el desarrollo del simulador horaria interactivo con detección automática de choques y cálculo dinámico de créditos sobre cualquier otra función secundaria.
-2. Incorporar en la malla interactiva la proyección multinivel de la cadena crítica de prerrequisitos/correquisitos y el indicador de tiempo mínimo restante para la titulación.
-3. Establecer como requisito obligatorio la anonimización estricta de todas las valoraciones sobre docentes y dificultad de asignaturas registradas por los alumnos.
+En reunión de validación celebrada por el equipo de desarrollo y representantes estudiantiles, se alcanzaron los siguientes acuerdos formales:
+1. Definir el alcance del sistema como un proyecto independiente y comunitario sin dependencia funcional ni técnica de las bases de datos de la universidad.
+2. Desarrollar un módulo traductor/parser capaz de procesar la planilla Excel oficial y convertirla en una estructura de datos estándar consumible por la web.
+3. Priorizar la grilla semanal interactiva con detección automática de topes, la malla de cadena crítica y el sistema de evaluación docente anónimo.
